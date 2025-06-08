@@ -16,7 +16,10 @@ name: Lint Code Base
 #############################
 on:
   pull_request:
-    branches: [ '**' ]
+    branches: ["**"]
+
+permissions:
+  contents: read
 
 ###############
 # Set the Job #

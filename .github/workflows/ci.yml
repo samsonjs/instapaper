@@ -2,7 +2,10 @@ name: CI
 
 on:
   pull_request:
-    branches: [ '**' ]
+    branches: ["**"]
+
+permissions:
+  contents: read
 
 jobs:
   # Set the job key. The key is displayed as the job name
@@ -10,7 +13,7 @@ jobs:
   tests:
     strategy:
       matrix:
-        ruby: [ '3.4', '3.3', '3.2' ]
+        ruby: ["3.4", "3.3", "3.2"]
 
     name: Tests - Ruby ${{ matrix.ruby }}
     # Set the type of machine to run on
