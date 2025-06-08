@@ -1,5 +1,0 @@
-{
-  "threshold": 2,
-  "ignore": ["spec/**"],
-  "reporters": ["threshold"]
-}
