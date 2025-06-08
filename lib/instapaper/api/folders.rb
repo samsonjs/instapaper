@@ -18,7 +18,7 @@ module Instapaper
 
       # Deletes the folder and moves any articles in it to the Archive.
       # @param folder_id [String] The id of the folder.
-      def delete_folder(folder_id)
+      def delete_folder(folder_id) # rubocop:disable Naming/PredicateMethod
         perform_post_with_unparsed_response('/api/1.1/folders/delete', folder_id: folder_id)
         true
       end
