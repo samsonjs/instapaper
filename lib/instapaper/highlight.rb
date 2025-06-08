@@ -1,16 +1,16 @@
-require 'virtus'
+require 'dry-struct'
+require 'instapaper/types'
 
 module Instapaper
-  class Highlight
-    include Virtus.value_object
+  class Highlight < Dry::Struct
+    include Types
+    transform_keys(&:to_sym)
 
-    values do
-      attribute :type, String
-      attribute :highlight_id, String
-      attribute :bookmark_id, String
-      attribute :text, String
-      attribute :position, String
-      attribute :time, String
-    end
+    attribute :type, Types::String
+    attribute :highlight_id, Types::Integer
+    attribute :bookmark_id, Types::Integer
+    attribute :text, Types::String
+    attribute :position, Types::Integer
+    attribute :time, Types::Integer.optional
   end
 end

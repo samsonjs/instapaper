@@ -1,17 +1,17 @@
-require 'virtus'
+require 'dry-struct'
+require 'instapaper/types'
 
 module Instapaper
-  class Folder
-    include Virtus.value_object
+  class Folder < Dry::Struct
+    include Types
+    transform_keys(&:to_sym)
 
-    values do
-      attribute :title, String
-      attribute :display_title, String
-      attribute :sync_to_mobile, Axiom::Types::Boolean
-      attribute :folder_id, Integer
-      attribute :position, String
-      attribute :type, String
-      attribute :slug, String
-    end
+    attribute :title, Types::String
+    attribute? :display_title, Types::String
+    attribute :sync_to_mobile, Types::BooleanFlag
+    attribute :folder_id, Types::Integer
+    attribute :position, Types::Coercible::Float
+    attribute :type, Types::String
+    attribute? :slug, Types::String
   end
 end
