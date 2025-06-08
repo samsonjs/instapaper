@@ -7,6 +7,9 @@ AllCops:
   DisplayCopNames: true
   NewCops: enable
 
+Gemspec/RequireMFA:
+  Enabled: false
+
 Metrics/BlockLength:
   Max: 36
   Exclude:
