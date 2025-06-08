@@ -20,6 +20,8 @@ on:
 
 permissions:
   contents: read
+  statuses: write
+  checks: write
 
 ###############
 # Set the Job #
