@@ -8,9 +8,9 @@ module Instapaper
 
     values do
       attribute :user, Instapaper::User
-      attribute :bookmarks, Array[Instapaper::Bookmark]
-      attribute :highlights, Array[Instapaper::Highlight]
-      attribute :delete_ids, Array[Integer]
+      attribute :bookmarks, [Instapaper::Bookmark]
+      attribute :highlights, [Instapaper::Highlight]
+      attribute :delete_ids, [Integer]
     end
 
     def each(&block)

@@ -1,9 +1,9 @@
 AllCops:
   Include:
-    - './Rakefile'
-    - 'instapaper.gemspec'
-    - 'lib/**/*.rb'
-    - 'spec/**/*.rb'
+    - "./Rakefile"
+    - "instapaper.gemspec"
+    - "lib/**/*.rb"
+    - "spec/**/*.rb"
   DisplayCopNames: true
   NewCops: enable
 
@@ -15,7 +15,7 @@ Metrics/BlockLength:
 Metrics/BlockNesting:
   Max: 2
 
-Metrics/LineLength:
+Layout/LineLength:
   AllowURI: true
   Enabled: false
 
@@ -29,10 +29,10 @@ Metrics/ParameterLists:
 
 Style/CollectionMethods:
   PreferredMethods:
-    map:      'collect'
-    reduce:   'inject'
-    find:     'detect'
-    find_all: 'select'
+    map: "collect"
+    reduce: "inject"
+    find: "detect"
+    find_all: "select"
 
 Style/Documentation:
   Enabled: false
@@ -53,15 +53,15 @@ Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
 Style/TrailingCommaInArguments:
-  EnforcedStyleForMultiline: 'comma'
+  EnforcedStyleForMultiline: "comma"
 
 Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: 'comma'
+  EnforcedStyleForMultiline: "comma"
 
 Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: 'comma'
+  EnforcedStyleForMultiline: "comma"
 
-Style/FileName:
+Naming/FileName:
   Exclude:
     - Rakefile
     - Gemfile

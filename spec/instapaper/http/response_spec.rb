@@ -30,12 +30,15 @@ describe Instapaper::HTTP::Response do
 
   describe '#valid?' do
     context 'when http error' do
+      it 'should be invalid'
     end
 
     context 'when body unparseable' do
+      it 'should be invalid'
     end
 
     context 'when error in body' do
+      it 'should be invalid'
     end
   end
 end
