@@ -1,7 +1,10 @@
 # Instapaper
 
+> [!NOTE]
+> This is a fork of the original [stve/instapaper](https://github.com/stve/instapaper) repository and is not available via RubyGems.
+
 [![Gem Version](http://img.shields.io/gem/v/instapaper.svg)][gem]
-![Tests](https://github.com/stve/instapaper/actions/workflows/ci.yml/badge.svg)
+![Tests](https://github.com/samsonjs/instapaper/actions/workflows/ci.yml/badge.svg)
 
 [gem]: https://rubygems.org/gems/instapaper
 
@@ -177,4 +180,4 @@ client.delete_highlight(highlight_id)
 
 ## Copyright
 
-Copyright (c) 2015 Steve Agalloco. See [LICENSE](https://github.com/stve/instapaper/blob/master/LICENSE.md) for details.
+Copyright (c) 2015 Steve Agalloco. See [LICENSE](https://github.com/samsonjs/instapaper/blob/master/LICENSE.md) for details.
