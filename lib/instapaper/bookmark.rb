@@ -1,21 +1,21 @@
-require 'virtus'
+require 'dry-struct'
+require 'instapaper/types'
 
 module Instapaper
-  class Bookmark
-    include Virtus.value_object
+  class Bookmark < Dry::Struct
+    include Types
+    transform_keys(&:to_sym)
 
-    values do
-      attribute :instapaper_hash, String
-      attribute :description, String
-      attribute :bookmark_id, Integer
-      attribute :private_source, String
-      attribute :title, String
-      attribute :url, String
-      attribute :progress_timestamp, DateTime
-      attribute :time, DateTime
-      attribute :progress, String
-      attribute :starred, String
-      attribute :type, String
-    end
+    attribute :type, Types::String
+    attribute :bookmark_id, Types::Integer
+    attribute :url, Types::String
+    attribute :title, Types::String
+    attribute? :description, Types::String
+    attribute? :instapaper_hash, Types::String
+    attribute? :private_source, Types::String
+    attribute? :progress_timestamp, Types::Integer.optional
+    attribute? :time, Types::Integer.optional
+    attribute? :progress, Types::StringOrInteger
+    attribute? :starred, Types::StringOrInteger
   end
 end

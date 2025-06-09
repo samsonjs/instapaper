@@ -1,14 +1,14 @@
-require 'virtus'
+require 'dry-struct'
+require 'instapaper/types'
 
 module Instapaper
-  class User
-    include Virtus.value_object
+  class User < Dry::Struct
+    include Types
+    transform_keys(&:to_sym)
 
-    values do
-      attribute :username, String
-      attribute :user_id, Integer
-      attribute :type, String
-      attribute :subscription_is_active, Axiom::Types::Boolean
-    end
+    attribute :username, Types::String
+    attribute :user_id, Types::Integer
+    attribute :type, Types::String
+    attribute? :subscription_is_active, Types::BooleanFlag.optional
   end
 end
