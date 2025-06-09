@@ -3,16 +3,21 @@
 > [!NOTE]
 > This is a fork of the original [stve/instapaper](https://github.com/stve/instapaper) repository and is not available via RubyGems.
 
-[![Gem Version](http://img.shields.io/gem/v/instapaper.svg)][gem]
 ![Tests](https://github.com/samsonjs/instapaper/actions/workflows/ci.yml/badge.svg)
-
-[gem]: https://rubygems.org/gems/instapaper
 
 Instapaper is a ruby wrapper for interacting with [Instapaper's Full API](https://www.instapaper.com/api/full).  Note that access to the Full API is restricted to Instapaper subscribers only.
 
 ## Installation
 
-    gem install instapaper
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'instapaper', github: 'samsonjs/instapaper'
+```
+
+And then execute:
+
+    bundle install
 
 ## Usage
 
