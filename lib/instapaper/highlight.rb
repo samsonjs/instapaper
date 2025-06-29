@@ -11,6 +11,6 @@ module Instapaper
     attribute :bookmark_id, Types::Integer
     attribute :text, Types::String
     attribute :position, Types::Integer
-    attribute :time, Types::Integer.optional
+    attribute :time, Types::UnixTime
   end
 end

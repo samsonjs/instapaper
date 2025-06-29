@@ -13,8 +13,8 @@ module Instapaper
     attribute? :description, Types::String
     attribute? :instapaper_hash, Types::String
     attribute? :private_source, Types::String
-    attribute? :progress_timestamp, Types::Integer.optional
-    attribute? :time, Types::Integer.optional
+    attribute? :progress_timestamp, Types::UnixTime
+    attribute? :time, Types::UnixTime
     attribute? :progress, Types::StringOrInteger
     attribute? :starred, Types::StringOrInteger
   end

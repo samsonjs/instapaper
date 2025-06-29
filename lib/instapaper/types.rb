@@ -18,5 +18,17 @@ module Instapaper
         !!value
       end
     end
+
+    # Converts Unix timestamps to Time objects
+    UnixTime = Types::Time.constructor do |value|
+      case value
+      when ::Time
+        value
+      when nil
+        nil
+      else
+        ::Time.at(value.to_i)
+      end
+    end
   end
 end
