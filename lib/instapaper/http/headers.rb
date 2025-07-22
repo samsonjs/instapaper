@@ -1,6 +1,6 @@
 require 'addressable/uri'
 require 'base64'
-require 'simple_oauth'
+require 'instapaper/oauth'
 
 module Instapaper
   module HTTP
@@ -22,7 +22,7 @@ module Instapaper
       private
 
       def oauth_header
-        SimpleOAuth::Header.new(@request_method, @uri, @options, credentials.merge(ignore_extra_keys: true))
+        Instapaper::OAuth::Header.new(@request_method, @uri, @options, credentials.merge(ignore_extra_keys: true))
       end
 
       # Authentication hash

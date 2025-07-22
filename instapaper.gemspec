@@ -9,7 +9,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'dry-types', '~> 1.0'
   spec.add_dependency 'http', '>= 2', '< 6'
   spec.add_dependency 'multi_json', '~> 1'
-  spec.add_dependency 'simple_oauth', '~> 0.3'
   spec.author        = 'Steve Agalloco'
   spec.description   = "Ruby Client for Instapaper's Full API"
   spec.email         = 'steve.agalloco@gmail.com'
