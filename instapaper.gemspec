@@ -4,6 +4,7 @@ require 'instapaper/version'
 
 Gem::Specification.new do |spec|
   spec.add_dependency 'addressable', '~> 2.3'
+  spec.add_dependency 'base64', '~> 0.3'
   spec.add_dependency 'dry-struct', '~> 1.0'
   spec.add_dependency 'dry-types', '~> 1.0'
   spec.add_dependency 'http', '>= 2', '< 6'
