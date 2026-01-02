@@ -1,6 +1,6 @@
 require 'openssl'
 require 'base64'
-require 'cgi'
+require 'cgi/escape'
 require 'securerandom'
 
 module Instapaper
