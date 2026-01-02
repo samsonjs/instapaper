@@ -4,6 +4,7 @@ require 'instapaper/types'
 module Instapaper
   class User < Dry::Struct
     include Types
+
     transform_keys(&:to_sym)
 
     attribute :username, Types::String

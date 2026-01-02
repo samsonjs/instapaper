@@ -4,6 +4,7 @@ require 'instapaper/types'
 module Instapaper
   class Folder < Dry::Struct
     include Types
+
     transform_keys(&:to_sym)
 
     attribute :title, Types::String

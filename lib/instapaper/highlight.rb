@@ -4,6 +4,7 @@ require 'instapaper/types'
 module Instapaper
   class Highlight < Dry::Struct
     include Types
+
     transform_keys(&:to_sym)
 
     attribute :type, Types::String

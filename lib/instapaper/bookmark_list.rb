@@ -7,6 +7,7 @@ require 'instapaper/user'
 module Instapaper
   class BookmarkList < Dry::Struct
     include Types
+
     transform_keys(&:to_sym)
 
     attribute :user, Instapaper::User
