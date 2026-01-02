@@ -11,7 +11,7 @@ jobs:
   tests:
     strategy:
       matrix:
-        ruby: ["3.4", "3.3", "3.2"]
+        ruby: ["4.0", "3.4", "3.3", "3.2"]
 
     name: Tests - Ruby ${{ matrix.ruby }}
     # Set the type of machine to run on
@@ -38,7 +38,7 @@ jobs:
       - name: Bundle install
         run: |
           bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3 --without development
+          bundle install --jobs 8 --retry 3 --without development
 
       - name: Run tests
         run: |
